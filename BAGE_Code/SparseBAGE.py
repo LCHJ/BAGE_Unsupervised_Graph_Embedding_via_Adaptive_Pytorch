@@ -59,7 +59,7 @@ def parse_args():
     return parser.parse_args()
 
 
-# 1，查看gpu信息
+# 1，Viewing GPU Information
 if_cuda = torch.cuda.is_available()
 # if_cuda = False
 

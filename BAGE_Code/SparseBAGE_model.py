@@ -17,7 +17,6 @@ from torch_geometric.utils import (add_self_loops, negative_sampling, remove_sel
 from torch_sparse import SparseTensor
 
 
-
 # functions_path = os.path.abspath(os.path.join(os.getcwd(), '../..'))
 # sys.path.append(functions_path + '/Public/Graph_Embedding/functions/')
 
@@ -65,7 +64,7 @@ class SparseBAGE(torch.nn.Module):
             pred = self.log_softmax(pred)
             return pred, x
         else:
-            return x, x  # return x
+            return x, x
 
 
 def gen_neg_edge_index(edge_index, num_nodes, num_neg=1):
